@@ -30,10 +30,11 @@ public class Account {
 		balance=money;
 	}
 	
-	public String info() {
+	
+	@Override
+	public String toString() {
 		return String.format("계좌번호:%s,이름:%s,잔액:%d", id,name,balance);
 	}
-	
 	public void deposit(int money) throws BankException{
 		if(money<=0) {
 			throw new BankException("입금오류", BankError.MINUS);

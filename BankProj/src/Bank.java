@@ -143,12 +143,12 @@ public class Bank {
 //			System.out.println(e);
 //			accountInfo();
 //		}
-		System.out.println(acc.info());
+		System.out.println(acc);// tostring 생략가능
 	}
 
 	void allAccountInfo() {
 		for (int i = 0; i < accCnt; i++) { // 실계좌있는만큼 반복
-			System.out.println(accs[i].info());
+			System.out.println(accs[i]);// tostring 생략가능
 
 		}
 	}
