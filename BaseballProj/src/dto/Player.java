@@ -10,7 +10,7 @@ public class Player {
 	Player() {
 	}
 
-	Player(Integer num, String name, Integer backnum, Integer teamnum, String team) {
+	public Player(Integer num, String name, Integer backnum, Integer teamnum, String team) {
 		this.num = num;
 		this.name = name;
 		this.backnum = backnum;
@@ -63,5 +63,7 @@ public class Player {
 		return String.format("선수번호%d,선수명:%s,등번호:%d,소속팀:%s", num, name, backnum, teamname);
 
 	}
+	
+	
 
 }

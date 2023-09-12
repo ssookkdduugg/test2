@@ -35,4 +35,9 @@ public class Team {
 		return String.format("팀번호:%d, 팀명:%s,연고지:%s",num,name,local);
 	}
 	
+	public String shortString() {
+		
+		return String.format("%d,%s", num,name);
+	}
+	
 }
