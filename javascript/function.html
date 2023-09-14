@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //함수 형식 3가지 방법 
+        //1.
+        function add(x,y){
+            return x+y; 
+        }
+         var s = add(10,20);
+        // alert(s); //이거는 값이 나오니까 number 타입
+        var sum = add; //함수명을 담은거는 function 타입 
+
+        //2.
+        var minus = function(x,y){
+            return x-y;
+        }
+
+        // alert(minus(100,50));
+
+        // var multi= function(x,y){
+        //     return x*y;
+        // }
+
+        //3.
+        var multi = (x,y) =>  x*y; //화살표함수
+        alert(multi(10,20));
+        // var multi = (x,y) =>  { return x*y};
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

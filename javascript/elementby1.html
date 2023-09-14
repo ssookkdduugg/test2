@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let inputs = document.getElementsByName('age');
+            let div = document.getElementsByTagName('div')[0];
+            for(let input of inputs){
+               // console.log(input.value + ":"+input.checked);
+               if(input.checked){
+                div.innerHTML = input.value;
+               }
+            }
+            let genders = document.getElementsByName('gender');
+            for(let gender of genders){
+                console.log(gender.value);
+            }
+                
+           
+        }
+        //div안에 young이라는 글자쓰고싶을때
+        
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>나이:</td>
+            <td>
+                <label for="">
+                    <input type="radio" name="age" value="young" >18세미만
+                </label>
+                <label for="">
+                    <input type="radio" name="age" value="mature" checked>18세이상, 60세미만
+                </label>
+                <label for="">
+                    <input type="radio" name="age" value="senior">60세 이상
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>성별:</td>
+            <td>
+                <label for="">
+                    <input type="radio" name="gender" value="male" checked>남
+                </label>
+                <label for="">
+                    <input type="radio" name="gender" value="female">여
+                </label>
+            </td>
+        </tr>
+    </table>
+    <div></div>
+</body>
+</html>

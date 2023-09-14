@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //문자형으로 형변환 
+        let n = 10; 
+        let sn = String(n);
+        console.log(typeof sn);
+
+        let b = true;
+        let sb = String(b);
+        console.log(sb);
+        console.log(typeof sb);
+
+        //숫자로 형변환 Number() 
+        let ns = "123";
+        let nn = Number(ns);
+        console.log(nn);
+        console.log(typeof nn);
+
+        ns = '123z';
+        nn = Number(ns);
+        console.log(nn);
+
+        //불린형 -> 숫자형 
+        let bn = Number(b); //b: true  true는 숫자로 바꾸면 1이된다.
+        console.log(bn);
+        console.log(typeof bn);
+
+        b=false;
+        bn = Number(b); //b: true  false는 숫자로 바꾸면 0이된다.
+        console.log(bn);
+        
+        //불린형으로 형변환: Boolean()
+        //숫자형 -> 불린형
+        let nb = Boolean(1); //0이 아닌 모든 숫자는  true로 변환됨
+        console.log(nb); //true
+        console.log(typeof nb); //boolean type
+        nb = Boolean(0); //0 이면 false가 나옴 
+        console.log(nb);
+
+        //문자형 -> 불린형
+        let ssg = Boolean('hong');
+        console.log(ssg); //true 
+        console.log(typeof ssg); //boolean 형 
+        ssg = Boolean('0'); // ' 0' 안에 있는 것들은 다 true이고 
+        console.log(ssg);
+        ssg = Boolean(''); //빈문자열만 false로 변환
+        console.log(ssg);
+
+        let obj= {A:'aaa'};
+        console.log(Boolean(obj)); //true
+        obj = {};
+        console.log(Boolean(obj)); //true
+
+        let arr = [];
+        console.log(Boolean(arr)); //true
+
+        //null -> 불리언
+        console.log(Boolean(null));
+
+        //null -> 불리언 
+        let v; //undifined
+        console.log(v);
+        console.log(Boolean(v)); //false
+
+        console.log(Boolean(NaN)); // false
+
+        //형변환시 false
+        //0, null,'', undifined, NaN (주의: '0',''는 true로 변환된다.)
+        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
