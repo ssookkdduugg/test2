@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 마지막에 전체를 효과주더라도 구체적태그명시하면 안먹음 */
+        h1 {
+            color:orange;
+        }
+        p{
+            color: blue;
+        }
+        *{
+            color: red;
+        }
+
+        #header{
+            background-color: aquamarine;
+            width: 800px; 
+            margin: 0 auto; 
+            /* 위아래는 0 좌우는 auto */
+
+        }
+        #wrap{
+            background-color: bisque;
+            width: 500px;
+            height: 100px;
+            margin: 0 auto;
+             overflow: scroll; 
+        }
+        #aside{
+            width: 200px;
+            background-color: blue;
+            float: left;
+        }
+        #content{
+            width: 600px;
+            background-color: cadetblue;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>제목 글자 태그</h1>
+    <p>안 의원은 “이재명 대표는 당 대표 신분과 국회의원직을 이용해 국민 갈라치기 기술로 정쟁을 유발하고, 검찰 출</p>
+    
+    <div id="header">
+        <h1>#header 태그</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside"><h1>#aside 태그</h1></div>
+        <div id="content"><h1>#content 태그</h1></div>
+    </div>
+</body>
+</html>
