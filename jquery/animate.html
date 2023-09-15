@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function() {
+            setInterval(
+                $('#box').css({ // 기본 속성
+                width: 100, height: 100, background: 'red'
+            }).animate({ // 애니메이션 효과
+                width: 300, // 길이를 300으로
+                opacity: 0.5 // 불?투명도를 0.5
+            }, 1000)
+            .delay(1000) // 1초 딜레이
+            .animate({ // 다시 애니메이션 효과
+                width: 100,
+                opacity: 1
+            })
+        )}, 3000);
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

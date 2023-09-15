@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function(){
+        let maxcount = 100; 
+        let curcount = 20;
+        let appendDocument = function(){
+            for(let i=0; i<20; i++){
+                $('<h1>Infinity Scroll</h1>').appendTo('body'); 
+                // appendto('body') body에 표현한다. 
+
+            }
+        }
+        appendDocument(); 
+
+        $(window).scroll(function(){
+            //$(window).scrollTop() : 스크롤의 위치에 따라 변하는 값(세로 좌표)
+            //                      : 맨 위에서 0으로 시작하여 맨 아래 도달시 스크롤 길이 max값을 가짐 
+            //  $(window).height(): 보여지는 창의 높이길이 
+            // $(document).height(): html 문서의 높이길이, 보여지는 창의 높이길이보다 문서의 길이가 길다면
+            //                       스크롤이 생긴다.                  
+            let scrollHeight = $(window).scrollTop() +  $(window).height();
+            let documentHeight = $(document).height(); 
+            if(scrollHeight ==documentHeight && curcount < maxcount){
+                appendDocument(); 
+                curcount += 20; 
+            }
+            //documentheight = wh + w.s.t (스크롤밑에 숨겨진곳)
+        })
+      })  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

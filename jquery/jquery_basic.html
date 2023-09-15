@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        // $(document).ready(function() { //window.onload = function(){} 
+         //밑에거랑 같은방법 
+        // });
+
+        $(function(){
+            $('h1').css('color','red');
+            $('h1').css('background','black');
+
+           //alert($('script').attr('src')); //파라미터 1개인거 값을 가져오는거 
+            $('p').attr('id','test'); //p태그에 id넣을때 
+            // $('img').attr('src','flower.jpg');
+            // $('img').attr('alt','꽃');
+            // $('img').attr('width','100'); 이효과를 한번에 줄수도있음
+            $('img').attr({
+                src: function(index){
+                    return 'flower'+(index+1)+'.jpg'
+                },
+                alt:'꽃',
+                width: function(index){
+                    return (index+1)*100;
+                }
+            });
+        })
+
+        // window.onload = function(){ //자바스크립트로 할때는 이렇게 위에는 제이쿼리
+        //                             //자바스크립트는 배열이라 반복문 써줘야함
+        //     var hs = document.querySelectorAll('h1');
+        //     for(var h of hs){
+        //         h.style.color = 'red';
+        //         h.style.background = 'black';
+        //     }
+        // }
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <p></p>
+    <img src="" alt=""><br>
+    <img src="" alt=""><br>
+    <img src="" alt="">
+</body>
+</html>
